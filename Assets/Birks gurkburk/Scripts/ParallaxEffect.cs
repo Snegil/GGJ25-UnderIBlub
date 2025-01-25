@@ -25,15 +25,6 @@ public class ParallaxEffect : MonoBehaviour
         float movementX = cam.transform.position.x * (1 - parallaxEffect);
         float movementY = cam.transform.position.y * (1 - parallaxEffect);
         transform.position = new Vector3(startPosX + distanceX, startPosY + distanceY, transform.position.z);
-        if (movementX > startPosX + length && movementY > startPosY + height)
-        {
-            startPosX += length;
-            startPosY += height;
-        }
-        else if (movementX < startPosX - length && movementY < startPosY - height)
-        {
-            startPosX -= length;
-            startPosY -= height;
-        }
+        
     }
 }
