@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 70bf157f60895374cad9ab598a10ab9c
+guid: 1dc97c7b28dde664db9918092c09f017
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6204032772549332159
-    second: rock trim_0
+      213: -6955652557034833710
+    second: SquareUiii_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rock trim_0
+      name: SquareUiii_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 32
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 143b0515019d6e9a0800000000000000
-      internalID: -6204032772549332159
+      spriteID: 2d8b6ec1ade887f90800000000000000
+      internalID: -6955652557034833710
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rock trim_0: -6204032772549332159
+      SquareUiii_0: -6955652557034833710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
