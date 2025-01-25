@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      underwater background_0: 116167096742370261
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
