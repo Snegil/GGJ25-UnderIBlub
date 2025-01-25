@@ -19,15 +19,15 @@ public class Pause : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = !isPaused;
-            pauseScreen.SetActive(!isPaused);
+            pauseScreen.SetActive(isPaused);
 
             if (isPaused == true)
             {
-                Time.timeScale = 0;
+                Time.timeScale = 0f;
             }
             else
             {
-                Time.timeScale = 1;
+                Time.timeScale = 1f;
             }
         }
 
