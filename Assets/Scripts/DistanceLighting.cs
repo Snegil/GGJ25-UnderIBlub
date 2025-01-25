@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class DistanceLighting : MonoBehaviour
 {
-    Image image;
+    SpriteRenderer image;
     GameObject player;
 
     [SerializeField] GameObject top;
@@ -12,7 +12,7 @@ public class DistanceLighting : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        image = GetComponent<Image>();
+        image = GetComponent<SpriteRenderer>();
     }
 
     
