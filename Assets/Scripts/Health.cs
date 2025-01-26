@@ -39,10 +39,10 @@ public class Health : MonoBehaviour
     {
         currentOxygen -= oxygenDrainAmount * oxygenDrainSpeed * Time.deltaTime;
         oxygenBar.fillAmount = currentOxygen/(float)maxOxygen;
-       // pivotPoint.transform.localScale -= new Vector3(0.1f,0.1f, 0) * Time.deltaTime;
+  
 
         pivotPoint.transform.localScale = new Vector3(currentOxygen/(float)maxOxygen,currentOxygen/(float)maxOxygen,0);
-        if(currentOxygen <= 0)
+        if(currentOxygen <= 20)
         {
             currentOxygen = 0;
             gameOver.SetActive(true);
