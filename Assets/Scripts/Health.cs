@@ -17,10 +17,13 @@ public class Health : MonoBehaviour
     [SerializeField] GameObject pivotPoint;
     [SerializeField] Image oxygenBar;
     [SerializeField] GameObject player;
+
+    [SerializeField] GameObject gameOver;
+
     void Start()
     {
-       
-        currentOxygen = maxOxygen;
+       gameOver.SetActive(false);
+       currentOxygen = maxOxygen;
     }
 
     // Update is called once per frame
@@ -42,6 +45,7 @@ public class Health : MonoBehaviour
         if(currentOxygen <= 0)
         {
             currentOxygen = 0;
+            gameOver.SetActive(true);
             player.SetActive(false);
         }
         else if (currentOxygen >= maxOxygen)
