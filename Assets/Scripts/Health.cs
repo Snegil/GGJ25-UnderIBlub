@@ -12,39 +12,41 @@ public class Health : MonoBehaviour
     [SerializeField] Sprite[] sprite;
     [SerializeField] int spriteIndex;
     [SerializeField] SpriteRenderer spriteRenderer;
-    [SerializeField] CircleCollider2D bubbla;
-   
+    CircleCollider2D bubbla;
 
+    [SerializeField] GameObject pivotPoint;
     [SerializeField] Image oxygenBar;
+    [SerializeField] GameObject player;
     void Start()
     {
+       
         currentOxygen = maxOxygen;
     }
 
     // Update is called once per frame
     void Update()
-    {
-       oxygenBar.fillAmount = currentOxygen/maxOxygen;
-        bubbla.radius = currentOxygen / maxOxygen;
+    {       
+     
        DecreaseOxygen();
-       UpdateBubbleSize();
+      // UpdateBubbleSize();
        spriteRenderer.sprite = sprite[spriteIndex];
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-       
-        //Minska hälsan
-        //Minska bubblan?
-    }
-
+  
     void DecreaseOxygen()
     {
         currentOxygen -= oxygenDrainAmount * oxygenDrainSpeed * Time.deltaTime;
-       // bubbla.radius -= oxygenDrainAmount * Time.deltaTime;
-      
+        oxygenBar.fillAmount = currentOxygen/(float)maxOxygen;
+       // pivotPoint.transform.localScale -= new Vector3(0.1f,0.1f, 0) * Time.deltaTime;
+
+        pivotPoint.transform.localScale = new Vector3(currentOxygen/(float)maxOxygen,currentOxygen/(float)maxOxygen,0);
         if(currentOxygen <= 0)
         {
-            gameObject.SetActive(false);
+            currentOxygen = 0;
+            player.SetActive(false);
+        }
+        else if (currentOxygen >= maxOxygen)
+        {
+            currentOxygen = maxOxygen;
         }
     }
 
@@ -54,32 +56,40 @@ public class Health : MonoBehaviour
         // om syret har gått ner 10 sedan förra gången den kollade syret, minska bubblan
         spriteIndex = ((int)currentOxygen)/25;
        
-        spriteRenderer.sprite = sprite[spriteIndex];
-        //if(spriteIndex == 0 )
-        //{
-        //    spriteRenderer.sprite = sprite[0];
-        //    // syre är under 25
-        //    //minsta bubbelstorleken
-        //}
-        //else if(spriteIndex == 1 )
-        //{
-        //    spriteRenderer.sprite= sprite[1];
-        //    //syre är under 50
-        //    //näst minsta bubbelstorleken
-            
-        //}
-        //else if(spriteIndex == 2 )
-        //{
-        //    spriteRenderer.sprite = sprite[2];
-        //    //syre är under 75
-        //    //näst största bubbelstorleken
-        //}
-        //else if (spriteIndex == 3 )
-        //{
-        //    spriteRenderer.sprite = sprite[3];
-        //    //syre är 100
-        //    //Fullstor bubbla
-        //}
+       // spriteRenderer.sprite = sprite[spriteIndex];
+        if(spriteIndex == 0 )
+        {
+           spriteRenderer.sprite = sprite[0];
+            // syre är under 25
+            //minsta bubbelstorleken
+            bubbla.offset = new Vector2(0,-0.2f);
+            bubbla.radius = 0.2f;
+        }
+        else if(spriteIndex == 1 )
+        {
+            spriteRenderer.sprite= sprite[1];
+            bubbla.offset = new Vector2(0, -0.15f);
+            bubbla.radius = 0.3f;
+            //syre är under 50
+            //näst minsta bubbelstorleken
+
+        }
+        else if(spriteIndex == 2 )
+        {
+            spriteRenderer.sprite = sprite[2];
+            bubbla.offset = new Vector2(0,- 0.16f);
+            bubbla.radius = 0.3f;
+            //syre är under 75
+            //näst största bubbelstorleken
+        }
+        else if (spriteIndex == 3 )
+        {
+            spriteRenderer.sprite = sprite[3];
+            bubbla.offset = new Vector2(0,-0.02f);
+            bubbla.radius = 0.45f;
+            //syre är 100
+            //Fullstor bubbla
+        }
     }
    public void TakeDamage(int amount)
     {

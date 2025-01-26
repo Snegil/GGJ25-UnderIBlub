@@ -7,7 +7,7 @@ public class CollisionDetector : MonoBehaviour
     private Health health;
     void Start()
     {
-       health = GetComponentInParent<Health>();
+       health = GetComponent<Health>();
     }
 
     // Update is called once per frame
