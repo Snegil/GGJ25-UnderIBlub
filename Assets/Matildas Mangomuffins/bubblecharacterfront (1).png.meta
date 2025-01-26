@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6b2e6397b81b62a4a94ce971db76be05
+guid: 4dce6784b26ff9e4d8a28c85cbe31cc9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4409285062172848061
-    second: blowfish_0
+      213: 7528622886488889725
+    second: bubblecharacterfront (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blowfish_0
+      name: bubblecharacterfront (1)_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 10
-        width: 16
-        height: 12
+        x: 10
+        y: 0
+        width: 101
+        height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dbfaf34176de03d30800000000000000
-      internalID: 4409285062172848061
+      spriteID: d79db0d70aa0b7860800000000000000
+      internalID: 7528622886488889725
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blowfish_0: 4409285062172848061
+      bubblecharacterfront (1)_0: 7528622886488889725
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
