@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 direction = new Vector2(horizontalInput, verticalInput);
         aimTarget.transform.position = transform.position + (Vector3)direction * 1f;
-        transform.up = aimTarget.transform.position - transform.position;
+        transform.right = aimTarget.transform.position - transform.position;
     }
 
     
